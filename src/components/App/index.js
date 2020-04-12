@@ -1,5 +1,7 @@
 // == Import npm
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import fetchInApi from '../../utils/api';
 
 
 // == Import
@@ -10,12 +12,16 @@ import Pokemons from '../Pokemons/index';
 import './styles.css';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <Header />
-    <Pokemons />
-  </div>
-);
+const App = () => {
+  useEffect(fetchInApi, []);
+  return (
+    <div className="app">
+      <Header />
+      <Pokemons />
+    </div>
+  );
+};
+
 
 // == Export
 export default App;
