@@ -1,6 +1,7 @@
 const initialState = {
   next_url: '',
   pokemons: [],
+  pokemonName: '',
 };
 
 
@@ -16,6 +17,12 @@ export default (state = initialState, action = {}) => {
       return {
         ...state,
         next_url: action.payload,
+      };
+    }
+    case 'SET_POKEMON_NAME': {
+      return {
+        ...state,
+        pokemonName: action.payload,
       };
     }
     default: {

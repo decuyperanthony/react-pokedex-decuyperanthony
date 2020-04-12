@@ -1,25 +1,33 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { Card, Icon, Image } from 'semantic-ui-react';
+
+import store from '../../store/index';
 
 // == style
 import './styles.scss';
 
 
 const Pokemon = () => {
-  console.log('pokemon');
   const imgUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
   const endUrl = '.png';
   const pokemons = useSelector((state) => state.pokemons);
 
   const listPokemonsJSX = pokemons.map((pokemon, index) => (
 
-    <Card key={pokemon.name}>
+    <Card key={pokemon.name} data-key={index}>
       <Image src={imgUrl + (index + 1) + endUrl} wrapped ui={false} />
       <Card.Content>
-        <Card.Header>#{index + 1}  {pokemon.name}</Card.Header>
+        <Card.Header
+          data-key={pokemon.name}
+          onClick={(e) => {
+            console.log('index.currentTarget', e.currentTarget.getAttribute('data-key'));
+            store.dispatch({ type: 'SET_POKEMON_NAME', payload: e.currentTarget.getAttribute('data-key') });
+          }}
+        >#{index + 1}  {pokemon.name}
+        </Card.Header>
         <Card.Meta>
           <span className="date">Joined in 2015</span>
         </Card.Meta>
