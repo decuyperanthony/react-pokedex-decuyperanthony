@@ -24,7 +24,6 @@ const Pokemons = () => {
       <Pokemon />
       <button type="button" onClick={handleClick}>next
       </button>
-
     </Segment>
   );
 };

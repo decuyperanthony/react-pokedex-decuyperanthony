@@ -9,6 +9,11 @@ const fetchInApi = (url = POKE_API) => {
     url,
   );
   promise.then((response) => {
+    // const pokemons = response.data.results;
+    // console.log('response.data', pokemons);
+    // pokemons.forEach((pokemon) => {
+    //   console.log('pokemon.url', pokemon.url);
+    // });
     store.dispatch({ type: 'SET_POKEMONS', payload: response.data.results });
     store.dispatch({ type: 'SET_NEXT_URL', payload: response.data.next });
   });
