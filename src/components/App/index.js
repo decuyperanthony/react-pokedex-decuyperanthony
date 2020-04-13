@@ -6,7 +6,8 @@ import fetchInApi from '../../utils/api';
 
 // == Import
 import Header from '../Header/index';
-import Pokemons from '../Pokemons/index';
+import Main from '../Main/index';
+import PokemonDetails from '../PokemonDetails/index';
 
 
 import './styles.css';
@@ -17,7 +18,10 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Pokemons />
+      <div className="main-container">
+        <Main />
+        <PokemonDetails />
+      </div>
     </div>
   );
 };

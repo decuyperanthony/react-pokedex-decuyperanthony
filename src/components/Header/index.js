@@ -4,18 +4,12 @@ import { useSelector } from 'react-redux';
 
 // == styles
 import './styles.scss';
-import { Segment } from 'semantic-ui-react';
+import { Segment, Input } from 'semantic-ui-react';
 
 
-const Header = () => {
-  const pokemon = useSelector((state) => state.pokemon);
-  pokemon.map((e) => {
-    console.log('e', e);
-  });
-  return (
-    <Segment><header>Header {pokemon}</header></Segment>
-  );
-};
+const Header = () => (
+  <Segment inverted><Input inverted placeholder="Search..." /> </Segment>
+);
 
 
 export default Header;

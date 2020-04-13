@@ -1,0 +1,19 @@
+.pokemon-details {
+    flex: 30%;
+    height: 80vh;
+    margin: 0 0 0 1em !important;
+    // margin-left: 1em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .container-details-pokemon {
+
+    }
+
+    .container-picture {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
