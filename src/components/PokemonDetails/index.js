@@ -50,19 +50,9 @@ const PokemonDetails = () => {
       return (<Button color={color}>{type}</Button>);
     });
   }
-  // == PokemonJSX
-  // let pokemonJSX = '';
-  // if (pokemon === undefined) {
-  //   pokemonJSX = '';
-  // }
-  // else {
-  //   pokemonJSX = <PokemonDetails />;
-  // }
-
 
   return (
     <Segment loading={loading} className="pokemon-details">Pokemon details
-      {/* {pokemonJSX} */}
       <Card className="container-details-pokemon">
         <div className="container-picture">
           <Image src={pictureFront} wrapped ui={false} />
