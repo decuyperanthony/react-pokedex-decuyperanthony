@@ -1,6 +1,8 @@
 const initialState = {
+  inputValue: '',
   loading: false,
   next_url: '',
+  pokemonsFiltered: [],
   pokemons: [],
   pokemon: {},
 };
@@ -27,6 +29,13 @@ export default (state = initialState, action = {}) => {
       return {
         ...state,
         pokemon,
+      };
+    }
+    case 'SYNC_INPUT': {
+      const { input } = action;
+      return {
+        ...state,
+        inputValue: input,
       };
     }
     default: {

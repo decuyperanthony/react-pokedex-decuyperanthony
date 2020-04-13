@@ -7,6 +7,7 @@ import fetchInApi from '../../utils/api';
 
 // == Import Component
 import Pokemons from '../Pokemons/index';
+// import Pokemonss from '../TestPokemonInput/index';
 
 // == style
 import './styles.scss';
@@ -25,6 +26,7 @@ const Main = () => {
       <Pokemons />
       <Button loading={loading} type="button" onClick={handleClick}>next
       </Button>
+      {/* <Pokemonss /> */}
     </Segment>
   );
 };
