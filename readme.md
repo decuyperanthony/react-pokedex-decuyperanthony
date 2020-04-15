@@ -1,0 +1,1 @@
+## lire `https://github.com/reduxjs/redux-thunk`

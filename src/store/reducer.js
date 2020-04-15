@@ -48,11 +48,12 @@ export default (state = initialState, action = {}) => {
         theme: toggleTheme,
       };
     }
-    // case 'SET_FILTER_POKEMON': {
-    //   return {
-
-    //   }
-    // }
+    case 'CLOSE_POKEMONDETAILS_CONTAINER': {
+      return {
+        ...state,
+        pokemondetails: false,
+      };
+    }
     default: {
       return state;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 // == styles
 import './styles.scss';
@@ -14,6 +14,10 @@ const PokemonDetails = () => {
   const pokemon = useSelector((state) => state.pokemon);
   const loading = useSelector((state) => state.loading);
   const theme = useSelector((state) => state.theme);
+
+  const dispatch = useDispatch();
+  // const PokemonDetails = useSelector((state) => state.PokemonDetails);
+
 
   // == pictures
   const pictureFront = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
@@ -53,13 +57,19 @@ const PokemonDetails = () => {
     });
   }
 
+  const handleClick = () => {
+    console.log('il a cliqué');
+    dispatch({ type: 'CLOSE_POKEMONDETAILS_CONTAINER' });
+  };
+
   return (
     <Segment
-
       loading={loading}
       className="pokemon-details"
       inverted={theme}
-    >Pokemon details
+    >
+      <Icon link name="close" onClick={handleClick} />
+      Pokemon details
       <Card className="container-details-pokemon" inverted={theme}>
         <div className="container-picture">
           <Image src={pictureFront} wrapped ui={false} />
