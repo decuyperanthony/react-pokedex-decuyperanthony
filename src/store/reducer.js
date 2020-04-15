@@ -1,3 +1,11 @@
+import {
+  SET_POKEMONS,
+  SET_FILTER_POKEMON,
+  SET_POKEMON,
+  SYNC_INPUT,
+  TOGGLE_THEME,
+  CLOSE_POKEMONDETAILS_CONTAINER,
+} from './actions';
 
 const initialState = {
   inputValue: '',
@@ -12,7 +20,7 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    case 'SET_POKEMONS': {
+    case SET_POKEMONS: {
       return {
         ...state,
         pokemons: [...state.pokemons, ...action.payload],
@@ -20,13 +28,13 @@ export default (state = initialState, action = {}) => {
         // loading: true,
       };
     }
-    case 'SET_FILTER_POKEMON': {
+    case SET_FILTER_POKEMON: {
       return {
         ...state,
         pokemonsFiltered: [...action.payload],
       };
     }
-    case 'SET_POKEMON': {
+    case SET_POKEMON: {
       const pokemon = action.payload;
       return {
         ...state,
@@ -34,21 +42,21 @@ export default (state = initialState, action = {}) => {
         pokemondetails: true,
       };
     }
-    case 'SYNC_INPUT': {
+    case SYNC_INPUT: {
       const { input } = action;
       return {
         ...state,
         inputValue: input,
       };
     }
-    case 'TOGGLE_THEME': {
+    case TOGGLE_THEME: {
       const toggleTheme = !state.theme;
       return {
         ...state,
         theme: toggleTheme,
       };
     }
-    case 'CLOSE_POKEMONDETAILS_CONTAINER': {
+    case CLOSE_POKEMONDETAILS_CONTAINER: {
       return {
         ...state,
         pokemondetails: false,

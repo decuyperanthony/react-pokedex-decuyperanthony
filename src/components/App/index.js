@@ -1,6 +1,6 @@
 // == Import npm
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 import fetchInApi from '../../utils/api';

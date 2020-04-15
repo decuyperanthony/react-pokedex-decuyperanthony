@@ -2,6 +2,9 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 
+// == actions
+import { CLOSE_POKEMONDETAILS_CONTAINER } from '../../store/actions';
+
 // == styles
 import './styles.scss';
 import {
@@ -59,7 +62,7 @@ const PokemonDetails = () => {
 
   const handleClick = () => {
     console.log('il a cliqué');
-    dispatch({ type: 'CLOSE_POKEMONDETAILS_CONTAINER' });
+    dispatch({ type: CLOSE_POKEMONDETAILS_CONTAINER });
   };
 
   return (
