@@ -1,7 +1,9 @@
+
 const initialState = {
   inputValue: '',
+  theme: false,
   loading: false,
-  // next_url: '',
+  pokemondetails: false,
   pokemonsFiltered: [],
   pokemons: [],
   pokemon: {},
@@ -24,18 +26,12 @@ export default (state = initialState, action = {}) => {
         pokemonsFiltered: [...action.payload],
       };
     }
-    // case 'SET_NEXT_URL': {
-    //   return {
-    //     ...state,
-    //     loading: false,
-    //     next_url: action.payload,
-    //   };
-    // }
     case 'SET_POKEMON': {
       const pokemon = action.payload;
       return {
         ...state,
         pokemon,
+        pokemondetails: true,
       };
     }
     case 'SYNC_INPUT': {
@@ -43,6 +39,13 @@ export default (state = initialState, action = {}) => {
       return {
         ...state,
         inputValue: input,
+      };
+    }
+    case 'TOGGLE_THEME': {
+      const toggleTheme = !state.theme;
+      return {
+        ...state,
+        theme: toggleTheme,
       };
     }
     // case 'SET_FILTER_POKEMON': {

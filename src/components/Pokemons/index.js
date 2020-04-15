@@ -37,7 +37,10 @@ const Pokemons = () => {
 
 
   return (
-    <Card.Group itemsPerRow={6} stackable>
+    <Card.Group
+      itemsPerRow={6}
+      stackable
+    >
       {listPokemonsJSX}
     </Card.Group>
   );

@@ -47,6 +47,7 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "axios": "^0.19.2",
     "firebase": "^7.14.0",
     "prop-types": "*",

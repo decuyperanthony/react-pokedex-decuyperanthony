@@ -1,5 +1,7 @@
 // == Import npm
 import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 import fetchInApi from '../../utils/api';
 
@@ -15,12 +17,18 @@ import './styles.css';
 // == Composant
 const App = () => {
   useEffect(fetchInApi, []);
+  const pokemondetails = useSelector((state) => state.pokemondetails);
+  let pokemonDetailsJSX = '';
+  if (pokemondetails) {
+    pokemonDetailsJSX = <PokemonDetails />;
+  }
+
   return (
     <div className="app">
       <Header />
       <div className="main-container">
         <Main />
-        <PokemonDetails />
+        {pokemonDetailsJSX}
       </div>
     </div>
   );

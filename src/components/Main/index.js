@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useSelector } from 'react-redux';
 
@@ -16,12 +16,14 @@ import './styles.scss';
 const Main = () => {
   const loading = useSelector((state) => state.loading);
   const nextUrl = useSelector((state) => state.next_url);
+  const theme = useSelector((state) => state.theme);
+
   const handleClick = () => {
     fetchInApi(nextUrl);
   };
 
   return (
-    <Segment className="main">
+    <Segment className="main" inverted={theme}>
       <h2>Liste des Pokemons</h2>
       <Pokemons />
       <Button loading={loading} type="button" onClick={handleClick}>next

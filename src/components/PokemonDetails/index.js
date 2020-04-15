@@ -13,6 +13,8 @@ const PokemonDetails = () => {
   // == state
   const pokemon = useSelector((state) => state.pokemon);
   const loading = useSelector((state) => state.loading);
+  const theme = useSelector((state) => state.theme);
+
   // == pictures
   const pictureFront = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
   const pictureBack = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemon.id}.png`;
@@ -52,8 +54,13 @@ const PokemonDetails = () => {
   }
 
   return (
-    <Segment loading={loading} className="pokemon-details">Pokemon details
-      <Card className="container-details-pokemon">
+    <Segment
+
+      loading={loading}
+      className="pokemon-details"
+      inverted={theme}
+    >Pokemon details
+      <Card className="container-details-pokemon" inverted={theme}>
         <div className="container-picture">
           <Image src={pictureFront} wrapped ui={false} />
           <Image src={pictureBack} wrapped ui={false} />
@@ -63,10 +70,10 @@ const PokemonDetails = () => {
         <Card.Content>
           <Card.Header> {pokemon.id} {pokemon.name} </Card.Header>
           <Card.Meta>
-            <span className="date">weight : {pokemon.weight} height : {pokemon.height}</span>
+            <span className="date">weight : {pokemon.weight} pound height : {pokemon.height} inch</span>
           </Card.Meta>
           <Card.Description>
-            Matthew is a musician living in Nashville.
+            {pokemon.name} is a musician living in Nashville.
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
