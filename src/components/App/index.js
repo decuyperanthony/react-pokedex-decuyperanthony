@@ -19,6 +19,8 @@ const App = () => {
   useEffect(fetchInApi, []);
   const pokemondetails = useSelector((state) => state.pokemondetails);
   let pokemonDetailsJSX = '';
+  // si le client clique sur un pokemon cela me remplit l'objet pokemon
+  // et declenche l'ouverture de la section Pokemon Details
   if (pokemondetails) {
     pokemonDetailsJSX = <PokemonDetails />;
   }

@@ -16,6 +16,9 @@ const Pokemons = () => {
   const endUrl = '.png';
   const pokemons = useSelector((state) => state.pokemonsFiltered);
 
+  //!
+  const myUrl = (str) => Number((str.slice(-4, -1)).replace(/[^\d]/g, ''));
+
 
   const listPokemonsJSX = pokemons.map((pokemon, index) => (
 
@@ -26,10 +29,10 @@ const Pokemons = () => {
         fetchPokemon(pokemon.url);
       }}
     >
-      <Image src={imgUrl + (index + 1) + endUrl} wrapped ui={false} />
+      <Image src={imgUrl + myUrl(pokemon.url) + endUrl} wrapped ui={false} />
       <Card.Content>
         <Card.Description>
-          {'#'} {index + 1}  {pokemon.name}
+          {'#'} {myUrl(pokemon.url)}  {pokemon.name}
         </Card.Description>
       </Card.Content>
     </Card>

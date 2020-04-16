@@ -7,6 +7,7 @@ import { TOGGLE_THEME, SYNC_INPUT, SET_FILTER_POKEMON } from '../../store/action
 
 // == styles
 import './styles.scss';
+
 // eslint-disable-next-line import/order
 import {
   Segment,
@@ -14,7 +15,6 @@ import {
   Radio,
   Icon,
 } from 'semantic-ui-react';
-
 
 const Header = () => {
   // == redux
@@ -24,18 +24,17 @@ const Header = () => {
   // const pokemons = useSelector((state) => state.pokemons);
   // const theme = useSelector((state) => state.theme);
 
+  // pour filtrer les pokemons en fonction des touches du clavier..
   const filterPokemon = pokemons.filter((pokemon) => pokemon.name.indexOf(inputValue) !== -1);
-
 
   const handleChange = (evt) => {
     dispatch({ type: SYNC_INPUT, input: evt.target.value });
     dispatch({ type: SET_FILTER_POKEMON, payload: filterPokemon });
   };
 
-  const handleThemeChange = (evt) => {
+  const handleThemeChange = () => {
     dispatch({ type: TOGGLE_THEME });
   };
-
 
   return (
     <Segment inverted={theme} className="header">
