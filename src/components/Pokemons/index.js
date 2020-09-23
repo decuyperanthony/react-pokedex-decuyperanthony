@@ -28,6 +28,7 @@ const Pokemons = () => {
       onClick={() => {
         fetchPokemon(pokemon.url);
       }}
+      className="card-container"
     >
       <Image src={imgUrl + myUrl(pokemon.url) + endUrl} wrapped ui={false} />
       <Card.Content>
@@ -41,7 +42,7 @@ const Pokemons = () => {
 
   return (
     <Card.Group
-      itemsPerRow={6}
+      itemsPerRow={3}
       stackable
     >
       {listPokemonsJSX}
