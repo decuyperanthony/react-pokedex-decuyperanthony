@@ -66,7 +66,7 @@ const PokemonDetails = () => {
   };
 
   return (
-    <Segment
+    <div
       loading={loading}
       className="pokemon-details"
       inverted={theme}
@@ -96,7 +96,7 @@ const PokemonDetails = () => {
           </a>
         </Card.Content>
       </Card>
-    </Segment>
+    </div>
   );
 };
 
