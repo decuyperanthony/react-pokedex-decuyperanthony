@@ -13,10 +13,15 @@
 
   <h3 align="center">React Pokedex App</h3>
 
+## Overviews
+<img src=".github/img/overview1.png" alt="Logo" width="auto" >
+<img src=".github/img/overview2.png" alt="Logo" width="auto" >
+
 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
+
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
