@@ -50,7 +50,7 @@ Search on Pokemon API
 
 1. Clone the repo
 ```sh
-git clone https://github.com/decuyperanthony/star-wars
+git clone https://github.com/decuyperanthony/react-pokedex-decuyperanthony
 ```
 
 2. Install YARN client packages && start server
@@ -74,7 +74,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Anthony de Cuyper - [linkedin](https://www.linkedin.com/in/anthony-de-cuyper/) - decuyperanthony@gmail.com
 
-Project Link: [https://github.com/decuyperanthony/star-wars](https://github.com/decuyperanthony/star-wars)
+Project Link: [https://github.com/decuyperanthony/react-pokedex-decuyperanthony](https://github.com/decuyperanthony/react-pokedex-decuyperanthony)
 
 
 
