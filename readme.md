@@ -13,6 +13,20 @@
 
   <h3 align="center">React Pokedex App</h3>
 
+  <div align="center">
+  <h3>
+    <a href="https://anthonydecuyper.netlify.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/decuyperanthony/portefolio-react">
+      Repository
+    </a>
+
+
+  </h3>
+</div>
+
 ## Overviews
 <img src=".github/img/overview1.png" alt="Logo" width="auto" >
 <img src=".github/img/overview2.png" alt="Logo" width="auto" >
