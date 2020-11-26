@@ -24,7 +24,7 @@ const Main = () => {
 
   return (
     <Segment className="main" inverted={theme}>
-      <h2>Liste des Pokemons</h2>
+      <h2 style={{ marginBottom: '1em' }}>Liste des Pokemons</h2>
       <Pokemons />
       <Button loading={loading} type="button" onClick={handleClick}>next
       </Button>
